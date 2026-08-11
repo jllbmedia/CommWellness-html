@@ -6,7 +6,7 @@ This repository contains static HTML pages for CommWellness.
 
 
 - Proposed Profile Page
-- Link: (https://github.com/jllbmedia/CommWellness-html/blob/main/marakah-2026-practitioner-profile.html)
+- Link:https://jllbmedia.github.io/CommWellness-html/marakah-2026-practitioner-profile.html
 
 
 - Proposed Somatic Experiences Page
