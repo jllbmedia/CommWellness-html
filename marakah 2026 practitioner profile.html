@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marakah Mancini de León, LGSW, SEP | Odigo Wellness</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Odigo Brand Palette */
+            --blue-nile: #007788;
+            --river-mist: #C6E8EF;
+            --mariner: #6EC2C4;
+            --wisteria: #BDB4D4;
+            --celestial: #97B3D0;
+            --rose: #B995A1;
+            --dark-text: #222222;
+            --light-bg: #F8FCFD;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            border-bottom: 2px solid var(--river-mist);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            color: var(--blue-nile);
+            text-transform: uppercase;
+        }
+
+        .logo-subtext {
+            font-size: 0.75rem;
+            color: var(--dark-text);
+            display: block;
+            margin-top: -4px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--blue-nile);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1.5rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--mariner);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--river-mist) 0%, var(--white) 100%);
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .badge-group {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--wisteria);
+            color: var(--dark-text);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-alt {
+            background-color: var(--celestial);
+            color: var(--white);
+        }
+
+        h1 {
+            color: var(--blue-nile);
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: #444;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .practice-name {
+            font-size: 0.95rem;
+            color: var(--blue-nile);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.85rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--blue-nile);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--blue-nile);
+            border: 2px solid var(--blue-nile);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--blue-nile);
+            font-size: 1.6rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--river-mist);
+            padding-bottom: 0.5rem;
+        }
+
+        .bio-text p {
+            margin-bottom: 1.1rem;
+            font-size: 1.02rem;
+            color: #333333;
+        }
+
+        .highlight-box {
+            background-color: var(--white);
+            border-left: 4px solid var(--mariner);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .language-pill {
+            display: inline-block;
+            background-color: var(--river-mist);
+            color: var(--blue-nile);
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 0.3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--river-mist);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            color: var(--blue-nile);
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cred-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--river-mist);
+        }
+
+        .cred-card h3 {
+            color: var(--blue-nile);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .note-card {
+            background-color: #FFF9F2;
+            border: 1px solid #FFE4C4;
+            border-radius: 8px;
+            padding: 1.25rem;
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 1.5rem;
+        }
+
+        footer {
+            background-color: var(--blue-nile);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--river-mist);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.75rem; }
+            .hero { padding: 2.5rem 1rem; }
+            .cta-group { flex-direction: column; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div>
+                <span class="logo-text">ODIGO</span>
+                <span class="logo-subtext">wellness</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#credentials">Credentials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="badge-group">
+                <span class="badge">Bilingual: English & Español</span>
+                <span class="badge badge-alt">Accepting New Clients</span>
+            </div>
+            <h1>Marakah Mancini de León</h1>
+            <p class="subtitle">Licensed Graduate Social Worker (LGSW) & Somatic Experiencing Practitioner (SEP)</p>
+            <p class="practice-name">Community Wellness Craniosacral & Somatic Therapy</p>
+            
+            <div class="cta-group">
+                <a href="#insurance-flow" class="btn btn-primary">Book 15-Min Discovery Call (LGSW / Insurance)</a>
+                <a href="https://community-wellness.offeringtree.com/" target="_blank" class="btn btn-secondary">Book Private Bodywork & SE</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- About Section -->
+        <section id="about" class="bio-text">
+            <h2>About Marakah</h2>
+            
+            <p>Marakah offers <strong>Somatic Experiencing (SE)</strong>—including body-centered trauma processing—as well as <strong>Craniosacral Therapy</strong>, <strong>Rehabilitative Massage Therapy</strong>, <strong>Lymphatic Work</strong>, and <strong>Reiki</strong>.</p>
+            
+            <p>Marakah loves working with people of all genders and cultural backgrounds who are ready to heal themselves. She is continually amazed and delighted by the creative solutions that clients' systems develop—and the way healing continues long after clients leave her treatment room.</p>
+
+            <div class="highlight-box">
+                <p><strong>Gentle, Paced Trauma Work:</strong> Trauma processing works best when approached carefully—like <em>"eating a watermelon in pieces"</em> rather than all at once. By building your system's capacity step by step, we help you process trapped survival stress without feeling overwhelmed.</p>
+            </div>
+
+            <p>Her clinical and bodywork practice has been informed by each client she has worked with, as well as by mentors and peers at <em>Somatic Experiencing International, the Upledger Institute, Augsburg University, the Center for Victims of Torture, Park Nicollet, the Heartwood Institute, Northwestern Health Sciences University, Klose Training, Healing from the Core, Minka Brooklyn, Reiki by Esther,</em> and the <em>Third Root Community Health Center</em>.</p>
+
+            <p>Marakah’s work is deeply rooted in anti-oppressive practice, Liberation Psychology, and systems theory. It is informed by the lived experiences of working people she has supported and organized alongside through decades of dedication to the labor movement, the cooperative movement, and social justice collective healing work.</p>
+
+            <p><strong>Languages:</strong> Marakah is fluent in <span class="language-pill">English</span> and <span class="language-pill">Spanish</span>, comfortable in <span class="language-pill">Portuguese</span>, and communicates basic concepts in <span class="language-pill">French</span> and <span class="language-pill">Somali</span>.</p>
+
+            <p>She completed her 3-year Somatic Experiencing Practitioner (SEP) training in Spring 2025 and serves as an assistant for new SE student cohorts in English and Spanish (with Somatic Experiencing International and Uruguay's <em>Fénix Instituto</em>). She holds a Master's in Social Work (MSW) in Anti-Oppressive Clinical Practice from Augsburg University and practices as a Licensed Graduate Social Worker (LGSW).</p>
+
+            <div class="note-card">
+                <strong>Client Note:</strong> Marakah works with adults over the age of 18. If you are searching for a specialist for an infant or youth in your life, Marakah is happy to provide referrals to skilled practitioners specializing in younger age groups.
+            </div>
+        </section>
+
+        <!-- Service Modalities & Scope -->
+        <section id="services">
+            <h2>Service Offerings & Pathways</h2>
+            
+            <div class="services-grid">
+                <div class="card">
+                    <span class="card-tag">Psychotherapy & Somatics</span>
+                    <h3>Somatic Experiencing (SE) & Psychotherapy</h3>
+                    <p>A body-centered trauma healing modality focused on metabolizing stored stress and expanding your nervous system's capacity without needing to retell painful stories.</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.88rem; color: var(--blue-nile); font-weight: 500;"><em>Available via LGSW clinical practice (insurance/discovery call) and private-pay sessions.</em></p>
+                </div>
+
+                <div class="card">
+                    <span class="card-tag">Hands-On Clinical Bodywork</span>
+                    <h3>Clinical Bodywork & Modalities</h3>
+                    <p>Craniosacral Therapy, Rehabilitative Massage, Lymphatic Support, and Reiki. Hands-on sessions focused on physical recovery, nervous system soothing, and body integration.</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.88rem; color: #555; font-style: italic;">Note: Emotional and trauma processing sessions are directed into dedicated SE sessions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials & Education -->
+        <section id="credentials">
+            <h2>Certifications & Education</h2>
+            
+            <div class="credentials-grid">
+                <div class="cred-card">
+                    <h3>Clinical & Bodywork Credentials</h3>
+                    <ul>
+                        <li><strong>Licensed Graduate Social Worker (LGSW)</strong> (Supervised by Alison Hernandez, LICSW)</li>
+                        <li><strong>Somatic Experiencing Practitioner (SEP)</strong></li>
+                        <li><strong>Board Certified in Therapeutic Massage & Bodywork (BCTMB)</strong></li>
+                        <li><strong>Certified Neuromuscular Therapist (CNMT)</strong></li>
+                        <li><strong>Certified Manual Lymphatic Drainage Therapist (CMLDT)</strong></li>
+                        <li><strong>Certified Reiki Shihan</strong> (Maestra de Reiki, certified by Shihan Esther Cho)</li>
+                    </ul>
+                </div>
+
+                <div class="cred-card">
+                    <h3>Academic Education</h3>
+                    <ul>
+                        <li><strong>M.S.W. in Anti-Oppressive Clinical Practice</strong> — Augsburg University</li>
+                        <li><strong>Ph.D. & M.S. in Economics</strong> — Purdue University</li>
+                        <li><strong>B.A. in Economics & Spanish Literature</strong> — University of Minnesota Morris</li>
+                        <li><strong>A.A.S. & Certificate in Therapeutic Massage</strong> — Northwestern Health Sciences University</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="insurance-flow" style="background-color: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid var(--river-mist);">
+            <h2 style="border: none; padding: 0; margin-bottom: 0.75rem;">Get Started with Marakah</h2>
+            <p style="margin-bottom: 1.5rem;">Select the pathway that matches your current needs:</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 260px; background-color: var(--light-bg); padding: 1.25rem; border-radius: 6px; border: 1px solid var(--river-mist);">
+                    <h3 style="color: var(--blue-nile); font-size: 1.1rem; margin-bottom: 0.5rem;">Somatic Psychotherapy / Insurance</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Schedule a free 15-minute discovery call to explore clinical fit, sliding scale, or insurance options.</p>
+                    <a href="https://www.odigowellness.com/practitioners-marakah-mancini-de-leon" class="btn btn-primary" style="font-size: 0.88rem;">Schedule 15-Min Discovery Call</a>
+                </div>
+                
+                <div style="flex: 1; min-width: 260px; background-color: var(--light-bg); padding: 1.25rem; border-radius: 6px; border: 1px solid var(--river-mist);">
+                    <h3 style="color: var(--blue-nile); font-size: 1.1rem; margin-bottom: 0.5rem;">Private-Pay Bodywork & SE</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Book directly on OfferingTree for Craniosacral, Rehabilitative Massage, or private SE sessions.</p>
+                    <a href="https://community-wellness.offeringtree.com/" target="_blank" class="btn btn-secondary" style="font-size: 0.88rem;">Book on OfferingTree</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>Community Wellness LLC</strong> | Practicing at Odigo Wellness</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">3115 Hennepin Ave, Minneapolis, MN 55406</p>
+        <p style="font-size: 0.85rem; margin-top: 0.25rem;">Supervised by Alison Hernandez, LICSW</p>
+    </footer>
+
+</body>
+</html>
