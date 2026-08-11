@@ -10,7 +10,7 @@ This repository contains static HTML pages for CommWellness.
 
 
 - Proposed Somatic Experiences Page
-- Link: 
+- Link: https://jllbmedia.github.io/CommWellness-html/se-service-landing.html
 
 
 - For Business Directory
